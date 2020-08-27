@@ -1,0 +1,42 @@
+mapping = 
+
+{"mappings": {"properties": {"age": {"type": "long"},"entry": {"type": "date"},"name": {"type": "text","fields": {"keyword": {"type": "keyword","ignore_above": 256 }}},"objective": {"type": "text","fields": {"keyword": {"type": "keyword","ignore_above": 256}}},"sent_vec": {"type": "dense_vector","dims": 768}}}}
+
+
+
+
+{
+"mappings": {
+
+    "properties": {
+        "age": {
+            "type": "long"
+        },
+        "entry": {
+            "type": "date"
+        },
+        "name": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "objective": {
+            "type": "text",
+            "fields": {
+                "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                }
+            }
+        },
+        "sent_vec": {
+            "type": "dense_vector",
+            "dims": 768
+        }
+    }
+}
+}
