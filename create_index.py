@@ -7,4 +7,4 @@ class Index:
 
     def create_index(self, name):
         es = Elasticsearch(HOST = 'https://localhost', PORT = 9200)
-        es.create(index= name, ignore=400, body= self.__mappings)
+        es.indices.create(index=name, ignore=400, body= self.__mappings)
