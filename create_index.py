@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 
 class Index:
     def __init__(self):
-        self.__mappings = {"mappings": {"properties": {"age": {"type": "long"},"entry": {"type": "date"},"name": {"type": "text","fields": {"keyword": {"type": "keyword","ignore_above": 256 }}},"objective": {"type": "text","fields": {"keyword": {"type": "keyword","ignore_above": 256}}},"sent_vec": {"type": "dense_vector","dims": 768}}}}
+        self.__mappings = {"mappings": {"properties": {"age": {"type": "long"}, "student_type": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 256}}}, "name": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 256}}}, "objective": {"type": "text", "fields": {"keyword": {"type": "keyword", "ignore_above": 256}}}, "sent_vec": {"type": "dense_vector", "dims": 768}}}}
     
 
     def create_index(self, name):
